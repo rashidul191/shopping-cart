@@ -10,9 +10,6 @@ phonePlus.addEventListener("click", function () {
 
   const phoneCurrentPrice = document.getElementById("phoneCurrentPrice").innerText;
   const phoneCurrentPriceNumber = parseFloat(phoneCurrentPrice);
-
-  console.log(phoneCurrentPriceNumber * phoneTotalCount)
-
   const totalphoneCurrentPrice = phoneCurrentPriceNumber + 1219;
 
   document.getElementById("phoneCurrentPrice").innerText = totalphoneCurrentPrice;
