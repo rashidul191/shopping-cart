@@ -1,24 +1,25 @@
 // iPhone event handle
 // Phone Plus
-const phonePrice = 1219;
-const phoneCount = 1;
 const phonePlus = document.getElementById("phonePlus");
 phonePlus.addEventListener("click", function () {
   const phoneInputCount = document.getElementById("phoneInputCount").value;
-  const phoneInputCountNumber = parseFloat(phoneInputCount);
-  const phoneTotalCount = phoneInputCountNumber + phoneCount;
+  const phoneInputCountNumber = parseInt(phoneInputCount);
+  const phoneTotalCount = phoneInputCountNumber + 1;
 
   document.getElementById("phoneInputCount").value = phoneTotalCount;
 
   const phoneCurrentPrice = document.getElementById("phoneCurrentPrice").innerText;
   const phoneCurrentPriceNumber = parseFloat(phoneCurrentPrice);
-  const totalphoneCurrentPrice = phoneCurrentPriceNumber + phonePrice;
+
+  console.log(phoneCurrentPriceNumber * phoneTotalCount)
+
+  const totalphoneCurrentPrice = phoneCurrentPriceNumber + 1219;
 
   document.getElementById("phoneCurrentPrice").innerText = totalphoneCurrentPrice;
 
   const subTotal = document.getElementById("subTotal").innerText;
   const subTotalNumber = parseFloat(subTotal);
-  const totlaPhoneSubTotal = subTotalNumber + phonePrice;
+  const totlaPhoneSubTotal = subTotalNumber + 1219;
 
   document.getElementById("subTotal").innerText = totlaPhoneSubTotal;
   document.getElementById("totalBalance").innerText = totlaPhoneSubTotal;
@@ -28,52 +29,50 @@ phonePlus.addEventListener("click", function () {
 const phoneMinus = document.getElementById("phoneMinus");
 phoneMinus.addEventListener("click", function () {
   const phoneInputCount = document.getElementById("phoneInputCount").value;
-  const phoneInputCountNumber = parseFloat(phoneInputCount);
+  const phoneInputCountNumber = parseInt(phoneInputCount);
 
   if (phoneInputCountNumber != 1) {
-    const phoneTotalCount = phoneInputCountNumber - phoneCount;
+    const phoneTotalCount = phoneInputCountNumber - 1;
 
     document.getElementById("phoneInputCount").value = phoneTotalCount;
 
     const phoneCurrentPrice = document.getElementById("phoneCurrentPrice").innerText;
     const phoneCurrentPriceNumber = parseFloat(phoneCurrentPrice);
-    const totalphoneCurrentPrice = phoneCurrentPriceNumber - phonePrice;
+    const totalphoneCurrentPrice = phoneCurrentPriceNumber - 1219;
 
     document.getElementById("phoneCurrentPrice").innerText = totalphoneCurrentPrice;
 
     const subTotal = document.getElementById("subTotal").innerText;
     const subTotalNumber = parseFloat(subTotal);
-    const totlaPhoneSubTotal = subTotalNumber - phonePrice;
+    const totlaPhoneSubTotal = subTotalNumber - 1219;
 
     document.getElementById("subTotal").innerText = totlaPhoneSubTotal;
     document.getElementById("totalBalance").innerText = totlaPhoneSubTotal;
   } else {
-    document.getElementById("phoneInputCount").value = phoneCount;
-    document.getElementById("phoneCurrentPrice").innerText = phonePrice;
+    document.getElementById("phoneInputCount").value = 1;
+    document.getElementById("phoneCurrentPrice").innerText = 1219;
   }
 });
 
 // iPhone Case event handle
 // Phone Case Plus
-const phoneCasePrice = 59;
-const phoneCaseCournt = 1;
 const phoneCasePlus = document.getElementById("phoneCasePlus");
 phoneCasePlus.addEventListener("click", function () {
   const phoneCaseInputCount = document.getElementById("phoneCaseInputCount").value;
-  const phoneCaseCountNumber = parseFloat(phoneCaseInputCount);
-  const totalPhoneCaseCountNumber = phoneCaseCountNumber + phoneCaseCournt;
+  const phoneCaseCountNumber = parseInt(phoneCaseInputCount);
+  const totalPhoneCaseCountNumber = phoneCaseCountNumber + 1;
 
   document.getElementById("phoneCaseInputCount").value = totalPhoneCaseCountNumber;
 
   const phoneCaseCurrentPrice = document.getElementById("phoneCaseCurrentPrice").innerText;
   const phoneCaseCurrentPriceNumber = parseFloat(phoneCaseCurrentPrice);
-  const totalPhoneCaseCurrentPriceNumber = phoneCaseCurrentPriceNumber + phoneCasePrice;
+  const totalPhoneCaseCurrentPriceNumber = phoneCaseCurrentPriceNumber + 59;
 
   document.getElementById("phoneCaseCurrentPrice").innerText = totalPhoneCaseCurrentPriceNumber;
 
   const subTotal = document.getElementById("subTotal").innerText;
   const subTotalNumber = parseFloat(subTotal);
-  const totlaCaseSubTotal = subTotalNumber + phoneCasePrice;
+  const totlaCaseSubTotal = subTotalNumber + 59;
 
   document.getElementById("subTotal").innerText = totlaCaseSubTotal;
   document.getElementById("totalBalance").innerText = totlaCaseSubTotal;
@@ -83,26 +82,26 @@ phoneCasePlus.addEventListener("click", function () {
 const phoneCaseMinus = document.getElementById("phoneCaseMinus");
 phoneCaseMinus.addEventListener("click", function () {
   const phoneCaseInputCount = document.getElementById("phoneCaseInputCount").value;
-  const phoneCaseCountNumber = parseFloat(phoneCaseInputCount);
+  const phoneCaseCountNumber = parseInt(phoneCaseInputCount);
 
   if (phoneCaseCountNumber != 1) {
-    const totalPhoneCaseCountNumber = phoneCaseCountNumber - phoneCaseCournt;
+    const totalPhoneCaseCountNumber = phoneCaseCountNumber - 1;
     document.getElementById("phoneCaseInputCount").value = totalPhoneCaseCountNumber;
     const phoneCaseCurrentPrice = document.getElementById("phoneCaseCurrentPrice").innerText;
     const phoneCaseCurrentPriceNumber = parseFloat(phoneCaseCurrentPrice);
-    const totalPhoneCaseCurrentPriceNumber = phoneCaseCurrentPriceNumber - phoneCasePrice;
+    const totalPhoneCaseCurrentPriceNumber = phoneCaseCurrentPriceNumber - 59;
 
     document.getElementById("phoneCaseCurrentPrice").innerText = totalPhoneCaseCurrentPriceNumber;
 
     const subTotal = document.getElementById("subTotal").innerText;
     const subTotalNumber = parseFloat(subTotal);
-    const totlaCaseSubTotal = subTotalNumber - phoneCasePrice;
+    const totlaCaseSubTotal = subTotalNumber - 59;
 
     document.getElementById("subTotal").innerText = totlaCaseSubTotal;
     document.getElementById("totalBalance").innerText = totlaCaseSubTotal;
   } else {
-    document.getElementById("phoneCaseInputCount").value = phoneCaseCournt;
-    document.getElementById("phoneCaseCurrentPrice").innerText = phoneCasePrice;
+    document.getElementById("phoneCaseInputCount").value = 1;
+    document.getElementById("phoneCaseCurrentPrice").innerText = 59;
   }
 });
 
